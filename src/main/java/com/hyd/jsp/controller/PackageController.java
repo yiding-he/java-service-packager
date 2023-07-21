@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/packaging")
 public class PackageController {
 
+  /**
+   * 保存项目信息
+   */
   @PostMapping("save/{project}")
   public Result saveProject(@PathVariable String project, @RequestBody PackagingParams params) {
     return Result.success();
