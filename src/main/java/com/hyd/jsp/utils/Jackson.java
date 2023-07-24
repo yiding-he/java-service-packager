@@ -26,6 +26,7 @@ public class Jackson {
   static {
     STRICT = new JsonMapper();
     STRICT.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    STRICT.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
 
     LOOSE = STRICT.copy();
     LOOSE_NON_NULL_PROP = STRICT.copy();
